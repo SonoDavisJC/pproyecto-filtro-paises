@@ -1,0 +1,19 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin: 25px 50px;
+    padding: 0px 0px 25px 0px;
+
+    div {
+        height: 150px;
+        background: linear-gradient(rgba(45, 117, 131, 0.623), rgba(3, 6, 19, 0.767)), no-repeat center/100% url("../assets/map_image.jpg");
+        border-radius: 10px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+        font-weight: bold;
+        color: aliceblue;
+        font-size: 20px;
+        text-align: center;
+        padding: 50px 0px;
+    }
+}

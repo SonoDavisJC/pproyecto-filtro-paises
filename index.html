@@ -1,0 +1,53 @@
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta name="description" content="">
+        <title>PP01</title>
+        <link rel="stylesheet" href="./styles/estilos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1> Lista de Paises</h1>
+                <p class="text-primary"> Numero Total de Paises : <span id="info-total"></span></p>
+                <p id="info-texto" class="text-secondary"></p>
+                <div class="btn-ocpiones">
+                    <abbr title="Realiza busqueda por caracteres incluidos">
+                    <button id="btnLetras" role="filter">
+                    Por letras
+                    </button>
+                    </abbr>
+                    <abbr title="Realiza busqueda por las iniciales" class="abbr">
+                        <button id="btnPrimeraLetra" role="filter">
+                            Por las iniciales
+                        </button>
+                    </abbr>
+                    <abbr title="">
+                        <button id="btnOrdenar" > A / Z </button>
+                    </abbr>
+                </div>
+                <input type="text" name="letra" class="input-text" >
+                <p id="error-msg" class="mensaje-error"></p>
+            </div>
+        </header>
+
+        <main id="main-paises" class="main-paises"></main>
+
+        <footer class="footer">
+            <div class="logo">
+                Logo
+            </div>
+            <div class="informacion-user">
+                <p>2023</p>
+                <p>Johancanchary@gmail.com</p>
+            </div>
+        </footer>
+
+        <script src="./app.js" type="module"></script>
+    </body>
+</html>

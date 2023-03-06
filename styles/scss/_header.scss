@@ -1,0 +1,89 @@
+// Clase a heredar
+.style-textos {
+    text-align: center;
+    margin: 5px;
+    padding: 2px;
+} 
+
+header {
+    height: 65%;
+    display: grid;
+    place-content: center;
+    background: linear-gradient(rgba(57, 57, 87, 0.712), rgba(37, 86, 177, 0.5)), no-repeat url("../assets/globe-2.jpg");
+    background-size: cover;
+
+    div {
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        h1 {
+            @extend .style-textos;
+            text-shadow: 1px 1px 4px white
+        }
+        .text-primary {
+            @extend .style-textos;
+            color: whitesmoke;
+        }
+        .text-secondary {
+            @extend .style-textos;
+            height: 18px;
+            color: whitesmoke;
+            text-decoration: overline;
+            margin-bottom: 15px;
+            
+            span {
+                color: #28fd28;
+                font-weight: bold;
+            }
+        }
+        .btn-ocpiones {
+            @extend .style-textos;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            > * > *  {
+                background-color: #34d6c9;
+                padding: 15px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                box-shadow: 0px 2px 3px #081E30;
+                color: rgb(2, 23, 41);
+                font-family: 'Poppins', sans-serif;
+            }
+            .active {
+                transition: 0.3s ease-in-out;
+                background-color: #061816;
+                color: white
+            }
+        }
+
+        .input-text  {
+            padding: 10px 15px;
+            font-size: 15px;
+            outline: none;
+            border-radius: 20px;
+            border: 0.5px solid #1D252B;
+            box-shadow: 0px 1px 2px #1D252B;
+            margin-top: 15px;
+            text-align: center;
+            transition: 0.2s ease-in-out;
+            
+            &::placeholder {
+                color: rgba(0, 0, 0, 0.664);
+            }
+        }
+
+        .mensaje-error {
+            height: 18px;
+            margin-top: 8px;
+            text-align: center;
+            color: rgb(238, 8, 8);
+            text-shadow: 1px 1px 3px white;
+        }
+        }
+    }
