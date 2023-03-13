@@ -32,6 +32,7 @@ function CantidadIncluida (valor, cantidad) {
 function ValidarCaracteresIngresados(valor) {
     let patronRegex = (/[$%&|<>#*¿?\/{}¡!|´'`+-.]|[0-9]/g);
     if(patronRegex.test(valor)){
+        salidaPaieses.innerHTML = ""; 
         return MensajeError.textContent = 'No se permite carcteres especiales';
     }
     MensajeError.textContent = '';
@@ -90,7 +91,10 @@ btnPrimeraLetra.onclick = () => {
   FiltroPrimerasLetras(entrada.value);
 
   entrada.addEventListener("input", (event) => {
-    FiltroPrimerasLetras(event.target.value);
+    let letras = event.target.value
+    if(ValidarCaracteresIngresados(letras) === true){    
+      FiltroPrimerasLetras(letras);
+    }
   });
   
     ValidarSeleccionDeFiltro();
