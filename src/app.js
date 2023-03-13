@@ -118,7 +118,7 @@ btnOrden.onclick = () => {
 function ValidarSeleccionDeFiltro() {
     const opcionesFiltro = document.querySelectorAll('[role="filter"]')
     if(opcionesFiltro[0].className || opcionesFiltro[1].className){
-        console.log('Hay clases');
+        //console.log('Hay clases');
         entrada.removeAttribute('disabled');
         entrada.removeAttribute('placeholder');
         entrada.setAttribute('placeholder', 'Buscar');
